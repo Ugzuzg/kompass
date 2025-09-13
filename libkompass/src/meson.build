@@ -25,6 +25,7 @@ libkompass_vala_sources += [config] + files(
 
   'screenrecord.vala',
 
+  'access-point.vala',
   'arrow-button.vala',
   'app-button.vala',
   'audio-endpoint.vala',
@@ -55,8 +56,10 @@ libkompass_deps += [
   dependency('gio-2.0'),
   dependency('gio-unix-2.0'),
   dependency('libportal'),
+  dependency('libnm'),
   dependency('astal-apps-0.1'),
   dependency('astal-bluetooth-0.1'),
+  dependency('astal-network-0.1'),
   dependency('astal-io-0.1'),
   dependency('astal-cava-0.1'),
   dependency('astal-notifd-0.1'),

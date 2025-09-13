@@ -1,5 +1,6 @@
 blueprints = custom_target('blueprints',
   input: files(
+    'access-point.blp',
     'app-button.blp',
     'arrow-button.blp',
     'audio-endpoint.blp',
