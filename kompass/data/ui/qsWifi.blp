@@ -1,17 +1,17 @@
 using Gtk 4.0;
 using Adw 1;
-using AstalBluetooth 0.1;
+using AstalNetwork 0.1;
 
-template $KompassBarQsBluetooth : Box {
+template $KompassBarQsWifi : Box {
   orientation: vertical;
   spacing: 5;
   Adw.HeaderBar {
     [end]
     Button scan_button {
-      clicked => $toggle_discover();
+      clicked => $toggle_scan();
       Box {
         Spinner spinner {
-          visible: bind template.bluetooth as <AstalBluetooth.Bluetooth>.adapter as <AstalBluetooth.Adapter>.discovering;
+          visible: bind template.network as <AstalNetwork.Network>.wifi as <AstalNetwork.Wifi>.scanning;
           spinning: true;
         }
         Image {
@@ -22,7 +22,7 @@ template $KompassBarQsBluetooth : Box {
     }
     [end]
     Switch enable_switch {
-      activate => $toggle_powered();
+      activate => $toggle_enabled();
     }
 
   }
@@ -32,7 +32,7 @@ template $KompassBarQsBluetooth : Box {
     overflow: hidden;
     styles ["scroll-list"]
 
-    ListBox devices {
+    ListBox networks {
       hexpand: true;
       valign: start;
       selection-mode: none;
