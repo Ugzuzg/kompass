@@ -33,7 +33,6 @@ libkompass_vala_sources += [config] + files(
   'mpris-player.vala',
   'notification.vala',
   'scrolling-label.vala',
-  'tags.vala',
   'tray.vala',
   'vertical-clock.vala',
   'search-provider.vala',
@@ -64,7 +63,6 @@ libkompass_deps += [
   dependency('astal-mpris-0.1'),
   dependency('astal-tray-0.1'),
   dependency('astal-wireplumber-0.1'),
-  dependency('astal-river-0.1'),
 ]
 
 libkompass_lib = shared_library('kompass',

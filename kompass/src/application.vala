@@ -8,10 +8,6 @@ class KompassBar.Application : Astal.Application {
   public override void activate() {
     base.activate();
 
-    if (AstalRiver.get_default() == null) {
-      GLib.warning("could not connect to river.\n");
-    }
-
     Gtk.CssProvider provider = new Gtk.CssProvider();
     provider.load_from_resource("com/github/kotontrion/kompass-bar/style.css");
     Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), provider,

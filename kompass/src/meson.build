@@ -33,7 +33,6 @@ kompass_deps = [
   dependency('astal-io-0.1'),
   dependency('astal-cava-0.1'),
   dependency('astal-mpris-0.1'),
-  dependency('astal-river-0.1'),
   dependency('astal-battery-0.1'),
   dependency('astal-bluetooth-0.1'),
   dependency('astal-network-0.1'),
