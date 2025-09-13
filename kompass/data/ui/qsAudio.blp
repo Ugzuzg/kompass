@@ -5,7 +5,9 @@ using AstalWp 0.1;
 template $KompassBarQsAudio : Box {
   orientation: vertical;
   spacing: 5;
-  Adw.HeaderBar {}
+  Adw.HeaderBar {
+    show-end-title-buttons: false;
+  }
   Box {
     Button {
       icon-name: bind template.wp as <AstalWp.Wp>.audio as <AstalWp.Audio>.default-speaker as <AstalWp.Endpoint>.volume-icon;

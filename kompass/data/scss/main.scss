@@ -32,6 +32,5 @@ popover {
 }
 
 @include meta.load-css("bar");
-@include meta.load-css("tags");
 @include meta.load-css("quicksettings");
 @include meta.load-css("notifications");
