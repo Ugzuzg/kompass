@@ -177,11 +177,17 @@ template $KompassBarQs: Box {
             title: _("Bluetooth");
             child: $KompassBarQsBluetooth {};
           }
-          
+
           Adw.NavigationPage {
             tag: "notifications";
             title: _("Notifications");
             child: $KompassBarQsNotif {};
+          }
+
+          Adw.NavigationPage {
+            tag: "wifi";
+            title: _("WiFi");
+            child: $KompassBarQsWifi {};
           }
         }
       }

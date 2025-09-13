@@ -1,0 +1,59 @@
+using Gtk 4.0;
+using AstalNetwork 0.1;
+
+template $KompassAccessPoint : ListBoxRow {
+
+  selectable: false;
+  activatable: false;
+
+  child: CenterBox {
+    [start]
+    Box {
+      Image {
+        icon-size: large;
+        icon-name: bind template.ap as <AstalNetwork.AccessPoint>.icon-name;
+      }
+      Box {
+        orientation: vertical;
+        Label {
+          halign: start;
+          label: bind template.ap as <AstalNetwork.AccessPoint>.ssid;
+        }
+      }
+    }
+
+    PopoverMenu context_menu {
+      menu-model: menu;
+    }
+
+    GestureClick {
+      button: 3;
+      pressed => $open_menu();
+    }
+
+    GestureClick {
+      pressed => $toggle_connection();
+    }
+  };
+}
+
+
+menu menu {
+  item {
+    label: _("connected");
+    action: "bl-dev.connected";
+  }
+  item {
+    label: _("remove");
+    action: "bl-dev.remove";
+  }
+  item {
+    label: _("trusted");
+    action: "bl-dev.trusted";
+  }
+  item {
+    label: _("blocked");
+    action: "bl-dev.blocked";
+  }
+}
+
