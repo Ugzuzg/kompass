@@ -6,6 +6,8 @@ template $KompassBarQsBluetooth : Box {
   orientation: vertical;
   spacing: 5;
   Adw.HeaderBar {
+    show-end-title-buttons: false;
+
     [end]
     Button scan_button {
       clicked => $toggle_discover();
