@@ -35,6 +35,8 @@ template $KompassBarQsNotif : Box {
     Adw.ViewStackPage {
       name: "empty";
       child: Adw.StatusPage {
+        styles ["compact"]
+
         title: _("No Notifications");
         description: _("You have currently no notifications, you're all caught up");
         icon-name: "user-offline-symbolic";

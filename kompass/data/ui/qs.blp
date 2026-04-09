@@ -183,6 +183,8 @@ template $KompassBarQs: Box {
                 Adw.ViewStackPage {
                   name: "empty";
                   child: Adw.StatusPage {
+                    styles ["compact"]
+
                     title: _("No Media playing");
                     description: _("There is currently no media player active.");
                     icon-name: "audio-x-generic-symbolic";
