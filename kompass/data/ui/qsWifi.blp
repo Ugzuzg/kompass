@@ -55,6 +55,8 @@ template $KompassBarQsWifi : Box {
     Adw.ViewStackPage {
       name: "empty";
       child: Adw.StatusPage {
+        styles ["compact"]
+
         title: _("No WiFi network available");
         description: _("There are no network available, make sure wifi is turned on.");
         icon-name: "network-wireless-offline-symbolic";
