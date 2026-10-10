@@ -1,7 +1,11 @@
 @use "sass:meta";
 
 * {
-  font-family: "CaskaydiaCove Nerd Font";
+  font-family: "Adwaita Sans";
+}
+
+.font-mono {
+  font-family: "Adwaita Mono";
 }
 
 headerbar > windowhandle > box {
